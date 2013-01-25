@@ -1,0 +1,26 @@
+# Exclude the build directory
+build/*
+  
+# temp nibs and swap files
+*~.nib
+*.swp
+  
+# OS X folder attributes
+.DS_Store
+  
+# user-specific XCode 3 & 4 files
+#*.mode1
+#*.mode1v3
+#*.mode2v3
+#*.perspective
+#*.perspectivev3
+*.pbxuser
+#*.xcworkspace
+xcuserdata
+Snapshots
+
+# cocoapods
+Pods
+
+# Emacs temp files
+*~

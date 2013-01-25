@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6726697DE3FF4AE6B20C5834 /* libPods-MatchismoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */; };
+		AF6EB2DD16B26243007C5F76 /* SUDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2DC16B26243007C5F76 /* SUDeck.m */; };
+		AF6EB2DE16B26243007C5F76 /* SUDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2DC16B26243007C5F76 /* SUDeck.m */; };
+		AF6EB2E216B26535007C5F76 /* SUPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */; };
+		AF6EB2E316B26535007C5F76 /* SUPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */; };
+		AF6EB2E616B26BA5007C5F76 /* SUPlayingDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */; };
+		AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */; };
+		AFBAFED416B25C2E008F3D30 /* SUCardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */; };
 		AFEBF45616B2551200C0AC8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45516B2551200C0AC8B /* UIKit.framework */; };
 		AFEBF45816B2551200C0AC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45716B2551200C0AC8B /* Foundation.framework */; };
 		AFEBF45A16B2551200C0AC8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45916B2551200C0AC8B /* CoreGraphics.framework */; };
@@ -24,6 +32,9 @@
 		AFEBF47F16B2551200C0AC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45716B2551200C0AC8B /* Foundation.framework */; };
 		AFEBF48716B2551200C0AC8B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF48516B2551200C0AC8B /* InfoPlist.strings */; };
 		AFEBF48A16B2551200C0AC8B /* MatchismoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF48916B2551200C0AC8B /* MatchismoTests.m */; };
+		AFEBF49516B255A900C0AC8B /* SUCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF49416B255A900C0AC8B /* SUCard.m */; };
+		AFEBF49616B255A900C0AC8B /* SUCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF49416B255A900C0AC8B /* SUCard.m */; };
+		AFEBF49916B2567800C0AC8B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBF46D16B2551200C0AC8B /* MainStoryboard_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatchismoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchismoTests.xcconfig"; path = "Pods/Pods-MatchismoTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		AF6EB2DB16B26243007C5F76 /* SUDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUDeck.h; path = models/SUDeck.h; sourceTree = "<group>"; };
+		AF6EB2DC16B26243007C5F76 /* SUDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUDeck.m; path = models/SUDeck.m; sourceTree = "<group>"; };
+		AF6EB2E016B26535007C5F76 /* SUPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUPlayingCard.h; path = models/SUPlayingCard.h; sourceTree = "<group>"; };
+		AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingCard.m; path = models/SUPlayingCard.m; sourceTree = "<group>"; };
+		AF6EB2E416B26BA5007C5F76 /* SUPlayingDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUPlayingDeck.h; path = models/SUPlayingDeck.h; sourceTree = "<group>"; };
+		AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingDeck.m; path = models/SUPlayingDeck.m; sourceTree = "<group>"; };
+		AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUCardSpec.m; path = models/SUCardSpec.m; sourceTree = "<group>"; };
 		AFEBF45116B2551200C0AC8B /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBF45516B2551200C0AC8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFEBF45716B2551200C0AC8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +80,9 @@
 		AFEBF48616B2551200C0AC8B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AFEBF48816B2551200C0AC8B /* MatchismoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchismoTests.h; sourceTree = "<group>"; };
 		AFEBF48916B2551200C0AC8B /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		AFEBF49316B255A900C0AC8B /* SUCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUCard.h; path = models/SUCard.h; sourceTree = "<group>"; };
+		AFEBF49416B255A900C0AC8B /* SUCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUCard.m; path = models/SUCard.m; sourceTree = "<group>"; };
+		AFEBF49816B255D200C0AC8B /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,19 +103,39 @@
 				AFEBF47D16B2551200C0AC8B /* SenTestingKit.framework in Frameworks */,
 				AFEBF47E16B2551200C0AC8B /* UIKit.framework in Frameworks */,
 				AFEBF47F16B2551200C0AC8B /* Foundation.framework in Frameworks */,
+				6726697DE3FF4AE6B20C5834 /* libPods-MatchismoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF6EB2E816B27270007C5F76 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBF47316B2551200C0AC8B /* SUViewController.h */,
+				AFEBF47416B2551200C0AC8B /* SUViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		AF8382AE16B25A51008FE279 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		AFEBF44616B2551200C0AC8B = {
 			isa = PBXGroup;
 			children = (
+				AFEBF49816B255D200C0AC8B /* README.txt */,
 				AFEBF45B16B2551200C0AC8B /* Matchismo */,
 				AFEBF48216B2551200C0AC8B /* MatchismoTests */,
 				AFEBF45416B2551200C0AC8B /* Frameworks */,
 				AFEBF45216B2551200C0AC8B /* Products */,
+				8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +155,7 @@
 				AFEBF45716B2551200C0AC8B /* Foundation.framework */,
 				AFEBF45916B2551200C0AC8B /* CoreGraphics.framework */,
 				AFEBF47C16B2551200C0AC8B /* SenTestingKit.framework */,
+				7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,12 +163,12 @@
 		AFEBF45B16B2551200C0AC8B /* Matchismo */ = {
 			isa = PBXGroup;
 			children = (
+				AF6EB2E816B27270007C5F76 /* controllers */,
+				AFEBF49716B255AF00C0AC8B /* models */,
 				AFEBF46416B2551200C0AC8B /* SUAppDelegate.h */,
 				AFEBF46516B2551200C0AC8B /* SUAppDelegate.m */,
 				AFEBF46D16B2551200C0AC8B /* MainStoryboard_iPhone.storyboard */,
 				AFEBF47016B2551200C0AC8B /* MainStoryboard_iPad.storyboard */,
-				AFEBF47316B2551200C0AC8B /* SUViewController.h */,
-				AFEBF47416B2551200C0AC8B /* SUViewController.m */,
 				AFEBF45C16B2551200C0AC8B /* Supporting Files */,
 			);
 			path = Matchismo;
@@ -147,6 +191,7 @@
 		AFEBF48216B2551200C0AC8B /* MatchismoTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF8382AE16B25A51008FE279 /* models */,
 				AFEBF48816B2551200C0AC8B /* MatchismoTests.h */,
 				AFEBF48916B2551200C0AC8B /* MatchismoTests.m */,
 				AFEBF48316B2551200C0AC8B /* Supporting Files */,
@@ -161,6 +206,21 @@
 				AFEBF48516B2551200C0AC8B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFEBF49716B255AF00C0AC8B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBF49316B255A900C0AC8B /* SUCard.h */,
+				AFEBF49416B255A900C0AC8B /* SUCard.m */,
+				AF6EB2DB16B26243007C5F76 /* SUDeck.h */,
+				AF6EB2DC16B26243007C5F76 /* SUDeck.m */,
+				AF6EB2E016B26535007C5F76 /* SUPlayingCard.h */,
+				AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */,
+				AF6EB2E416B26BA5007C5F76 /* SUPlayingDeck.h */,
+				AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +251,7 @@
 				AFEBF47716B2551200C0AC8B /* Frameworks */,
 				AFEBF47816B2551200C0AC8B /* Resources */,
 				AFEBF47916B2551200C0AC8B /* ShellScript */,
+				441B9E6DF1AD4A3A8ADFDBC3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,12 +310,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEBF48716B2551200C0AC8B /* InfoPlist.strings in Resources */,
+				AFEBF49916B2567800C0AC8B /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		441B9E6DF1AD4A3A8ADFDBC3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-MatchismoTests-resources.sh\"\n";
+		};
 		AFEBF47916B2551200C0AC8B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +354,10 @@
 				AFEBF46216B2551200C0AC8B /* main.m in Sources */,
 				AFEBF46616B2551200C0AC8B /* SUAppDelegate.m in Sources */,
 				AFEBF47516B2551200C0AC8B /* SUViewController.m in Sources */,
+				AFEBF49516B255A900C0AC8B /* SUCard.m in Sources */,
+				AF6EB2DD16B26243007C5F76 /* SUDeck.m in Sources */,
+				AF6EB2E216B26535007C5F76 /* SUPlayingCard.m in Sources */,
+				AF6EB2E616B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFEBF48A16B2551200C0AC8B /* MatchismoTests.m in Sources */,
+				AFEBF49616B255A900C0AC8B /* SUCard.m in Sources */,
+				AFBAFED416B25C2E008F3D30 /* SUCardSpec.m in Sources */,
+				AF6EB2DE16B26243007C5F76 /* SUDeck.m in Sources */,
+				AF6EB2E316B26535007C5F76 /* SUPlayingCard.m in Sources */,
+				AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,12 +496,10 @@
 		};
 		AFEBF49116B2551200C0AC8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Matchismo.app/Matchismo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "MatchismoTests/MatchismoTests-Info.plist";
@@ -428,12 +511,10 @@
 		};
 		AFEBF49216B2551200C0AC8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Matchismo.app/Matchismo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Matchismo/Matchismo-Prefix.pch";
 				INFOPLIST_FILE = "MatchismoTests/MatchismoTests-Info.plist";
@@ -462,6 +543,7 @@
 				AFEBF48F16B2551200C0AC8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFEBF49016B2551200C0AC8B /* Build configuration list for PBXNativeTarget "MatchismoTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +552,7 @@
 				AFEBF49216B2551200C0AC8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
