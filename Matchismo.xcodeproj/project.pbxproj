@@ -14,6 +14,8 @@
 		AF6EB2E316B26535007C5F76 /* SUPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */; };
 		AF6EB2E616B26BA5007C5F76 /* SUPlayingDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */; };
 		AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */; };
+		AF6EB2E916B27548007C5F76 /* SUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF47416B2551200C0AC8B /* SUViewController.m */; };
+		AF6EB2EA16B27556007C5F76 /* SUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF46516B2551200C0AC8B /* SUAppDelegate.m */; };
 		AFBAFED416B25C2E008F3D30 /* SUCardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */; };
 		AFEBF45616B2551200C0AC8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45516B2551200C0AC8B /* UIKit.framework */; };
 		AFEBF45816B2551200C0AC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45716B2551200C0AC8B /* Foundation.framework */; };
@@ -371,6 +373,8 @@
 				AF6EB2DE16B26243007C5F76 /* SUDeck.m in Sources */,
 				AF6EB2E316B26535007C5F76 /* SUPlayingCard.m in Sources */,
 				AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
+				AF6EB2E916B27548007C5F76 /* SUViewController.m in Sources */,
+				AF6EB2EA16B27556007C5F76 /* SUAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
