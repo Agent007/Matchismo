@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6726697DE3FF4AE6B20C5834 /* libPods-MatchismoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */; };
+		AF3DF9FF16B8CB2600291CC4 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */; };
+		AF3DFA0016B8CB2600291CC4 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */; };
 		AF6EB2DD16B26243007C5F76 /* SUDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2DC16B26243007C5F76 /* SUDeck.m */; };
 		AF6EB2DE16B26243007C5F76 /* SUDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2DC16B26243007C5F76 /* SUDeck.m */; };
 		AF6EB2E216B26535007C5F76 /* SUPlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatchismoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchismoTests.xcconfig"; path = "Pods/Pods-MatchismoTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		AF3DF9FD16B8CB2600291CC4 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = models/CardMatchingGame.h; sourceTree = "<group>"; };
+		AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = models/CardMatchingGame.m; sourceTree = "<group>"; };
 		AF6EB2DB16B26243007C5F76 /* SUDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUDeck.h; path = models/SUDeck.h; sourceTree = "<group>"; };
 		AF6EB2DC16B26243007C5F76 /* SUDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUDeck.m; path = models/SUDeck.m; sourceTree = "<group>"; };
 		AF6EB2E016B26535007C5F76 /* SUPlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUPlayingCard.h; path = models/SUPlayingCard.h; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */,
 				AF6EB2E416B26BA5007C5F76 /* SUPlayingDeck.h */,
 				AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */,
+				AF3DF9FD16B8CB2600291CC4 /* CardMatchingGame.h */,
+				AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 				AF6EB2DD16B26243007C5F76 /* SUDeck.m in Sources */,
 				AF6EB2E216B26535007C5F76 /* SUPlayingCard.m in Sources */,
 				AF6EB2E616B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
+				AF3DF9FF16B8CB2600291CC4 /* CardMatchingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +382,7 @@
 				AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
 				AF6EB2E916B27548007C5F76 /* SUViewController.m in Sources */,
 				AF6EB2EA16B27556007C5F76 /* SUAppDelegate.m in Sources */,
+				AF3DFA0016B8CB2600291CC4 /* CardMatchingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

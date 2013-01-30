@@ -42,4 +42,19 @@
     return SUPlayingCard.rankStrings.count - 1;
 }
 
+#pragma mark - overridden method(s)
+
+- (NSInteger)match:(NSArray *)otherCards {
+    NSInteger score = 0;
+    if (otherCards.count) {
+        SUPlayingCard *otherCard = otherCards.lastObject;
+        if ([otherCard.suit isEqualToString:self.suit]) {
+            score = 1;
+        } else if (otherCard.rank == self.rank) {
+            score = 4;
+        }
+    }
+    return score;
+}
+
 @end
