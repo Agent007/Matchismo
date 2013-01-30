@@ -5,7 +5,6 @@
 @interface SUViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) NSUInteger flipsCount;
-//@property (strong, nonatomic) SUDeck *deck;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -20,26 +19,14 @@
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", _flipsCount];
 }
 
-//- (SUDeck *)deck {
-//    if (!_deck) {
-//        _deck = [[SUPlayingDeck alloc] init];
-//    }
-//    return _deck;
-//}
-
 - (void)setCardButtons:(NSArray *)cardButtons {
     _cardButtons = cardButtons;
-//    for (UIButton *cardButton in cardButtons) {
-//        SUCard *card = [self.deck drawRandomCard];
-//        [cardButton setTitle:card.contents forState:UIControlStateSelected];
-//    }
     [self updateUI];
 }
 
 - (CardMatchingGame *)game {
     if (!_game) {
         _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                  //usingDeck:self.deck];
                                                   usingDeck:[[SUPlayingDeck alloc] init]];
     }
     return _game;
