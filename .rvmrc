@@ -1,4 +1,4 @@
-rvm use 1.9.3@cs193p --create
+rvm use 2.0.0@cs193p --create
 
 if ! command -v bundle ; then
   gem install bundler
