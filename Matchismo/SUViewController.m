@@ -27,8 +27,7 @@
 
 - (CardMatchingGame *)game {
     if (!_game) {
-        _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                  usingDeck:[[SUPlayingDeck alloc] init]];
+        [self initializeNewGame];
     }
     return _game;
 }
@@ -38,11 +37,23 @@
 - (IBAction)flipCard:(UIButton *)sender {
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipsCount++;
-    self.lastFlipResultLabel.text = self.game.lastFlipResultDescription;
+//    self.lastFlipResultLabel.text = self.game.lastFlipResultDescription;
     [self updateUI];
 }
 
+- (IBAction)restartGame {
+    self.flipsCount = 0;
+    [self initializeNewGame];
+    [self updateUI];
+}
+
+- (void)initializeNewGame {
+    self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
+                                                  usingDeck:[[SUPlayingDeck alloc] init]];
+}
+
 - (void)updateUI {
+    self.lastFlipResultLabel.text = self.game.lastFlipResultDescription;
     for (UIButton *cardButton in self.cardButtons) {
         SUCard *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
