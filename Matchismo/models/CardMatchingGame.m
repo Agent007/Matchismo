@@ -6,6 +6,12 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
 
 @property (nonatomic) NSInteger score;
 @property (strong, nonatomic) NSMutableArray *cards;
+
+/* Since the match score is calculated in each call to flipCardAtIndex, it is 
+ most convenient to provide a property for the description of the last flip that 
+ view controllers can use to display. The code to generate this string belongs 
+ in the model anyway since it is related to the state of the underlying data.
+ */
 @property (strong, nonatomic) NSString *lastFlipResultDescription;
 
 @end
