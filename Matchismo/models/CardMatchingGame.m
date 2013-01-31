@@ -6,6 +6,7 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
 
 @property (nonatomic) NSInteger score;
 @property (strong, nonatomic) NSMutableArray *cards;
+@property (strong, nonatomic) NSString *lastFlipResultDescription;
 
 @end
 
@@ -40,6 +41,8 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
     SUCard *card = [self cardAtIndex:index];
     if (!card.isUnplayable) {
         if (!card.isFaceUp) {
+            self.lastFlipResultDescription = [NSString stringWithFormat:@"Flipped up %@", card];
+            
             // check for other card(s) that may be a match
             for (SUCard *otherCard in self.cards) {
                 if (otherCard.isFaceUp && !otherCard.isUnplayable) {
@@ -47,10 +50,13 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
                     if (matchScore) {
                         otherCard.isUnplayable = YES;
                         card.isUnplayable = YES;
-                        self.score += matchScore * MATCH_BONUS;
+                        NSInteger points = matchScore * MATCH_BONUS;
+                        self.score += points;
+                        self.lastFlipResultDescription = [NSString stringWithFormat:@"Matched %@ & %@ for %d points", card, otherCard, points];
                     } else { // no match
                         otherCard.isFaceUp = NO; // hide previously shown card(s)
                         self.score -= MISMATCH_PENALTY;
+                        self.lastFlipResultDescription = [NSString stringWithFormat:@"%@ & %@ don't match! %d point penalty!", card, otherCard, MISMATCH_PENALTY];
                     }
                 }
             }

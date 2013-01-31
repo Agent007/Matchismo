@@ -8,6 +8,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastFlipResultLabel;
 @end
 
 @implementation SUViewController
@@ -37,6 +38,7 @@
 - (IBAction)flipCard:(UIButton *)sender {
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipsCount++;
+    self.lastFlipResultLabel.text = self.game.lastFlipResultDescription;
     [self updateUI];
 }
 
