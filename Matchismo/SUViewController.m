@@ -88,6 +88,7 @@ enum CardGame {
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
         
+        // show or hide card button 'face-down' image
         if (!cardButton.selected) {
             cardButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4);
             [cardButton setImage:[UIImage imageNamed:@"cardBack.jpg"]
