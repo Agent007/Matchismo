@@ -50,20 +50,31 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
             self.lastFlipResultDescription = [NSString stringWithFormat:@"Flipped up %@", card];
             
             // check for other card(s) that may be a match
+            NSMutableArray *otherCards = [NSMutableArray array];
             for (SUCard *otherCard in self.cards) {
-                if (otherCard.isFaceUp && !otherCard.isUnplayable) {
-                    NSInteger matchScore = [card match:@[otherCard]];
-                    if (matchScore) {
+                if ((otherCards.count < self.numberOfCardsToMatch) && otherCard.isFaceUp && !otherCard.isUnplayable) {
+                    [otherCards addObject:otherCard];
+                }
+            }
+            if (otherCards.count == (self.numberOfCardsToMatch - 1)) {
+                NSInteger matchScore = [card match:otherCards];
+                NSString *otherCardsString = [otherCards componentsJoinedByString:@" & "];
+                if (matchScore) {
+                    for (SUCard *otherCard in otherCards) {
                         otherCard.isUnplayable = YES;
-                        card.isUnplayable = YES;
-                        NSInteger points = matchScore * MATCH_BONUS;
-                        self.score += points;
-                        self.lastFlipResultDescription = [NSString stringWithFormat:@"Matched %@ & %@ for %d points", card, otherCard, points];
-                    } else { // no match
-                        otherCard.isFaceUp = NO; // hide previously shown card(s)
-                        self.score -= MISMATCH_PENALTY;
-                        self.lastFlipResultDescription = [NSString stringWithFormat:@"%@ & %@ don't match! %d point penalty!", card, otherCard, MISMATCH_PENALTY];
                     }
+                    card.isUnplayable = YES;
+                    NSInteger points = matchScore * MATCH_BONUS * self.numberOfCardsToMatch;
+                    self.score += points;
+                    self.lastFlipResultDescription = [NSString stringWithFormat:@"Matched %@ & %@ for %d points", card, otherCardsString, points];
+                } else { // no match
+                    // hide previously shown card(s)
+                    for (SUCard *otherCard in otherCards) {
+                        otherCard.isFaceUp = NO;
+                    }
+                    NSInteger penalty = MISMATCH_PENALTY * self.numberOfCardsToMatch;
+                    self.score -= penalty;
+                    self.lastFlipResultDescription = [NSString stringWithFormat:@"%@ & %@ don't match! %d point penalty!", card, otherCardsString, penalty];
                 }
             }
             self.score -= FLIP_COST;

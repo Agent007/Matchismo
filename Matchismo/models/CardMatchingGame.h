@@ -4,6 +4,7 @@
 
 @property (nonatomic, readonly) NSInteger score;
 @property (nonatomic, readonly) NSString *lastFlipResultDescription;
+@property (nonatomic) NSUInteger numberOfCardsToMatch;
 
 - (id)initWithCardCount:(NSUInteger)cardCount
               usingDeck:(SUDeck *)deck;

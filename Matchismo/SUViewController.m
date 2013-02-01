@@ -2,13 +2,21 @@
 #import "SUPlayingDeck.h"
 #import "CardMatchingGame.h"
 
+enum CardGame {
+    TwoCardGame,
+    ThreeCardGame
+};
+
 @interface SUViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) NSUInteger flipsCount;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastFlipResultLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameSelectionControl;
+
 @end
 
 @implementation SUViewController
@@ -35,21 +43,38 @@
 #pragma mark - actions
 
 - (IBAction)flipCard:(UIButton *)sender {
+    self.gameSelectionControl.enabled = NO;
     [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
     self.flipsCount++;
-//    self.lastFlipResultLabel.text = self.game.lastFlipResultDescription;
     [self updateUI];
 }
 
 - (IBAction)restartGame {
+    self.gameSelectionControl.enabled = YES;
     self.flipsCount = 0;
     [self initializeNewGame];
     [self updateUI];
 }
 
+- (IBAction)selectGame:(UISegmentedControl *)sender {
+    self.game.numberOfCardsToMatch = [self selectedNumberOfCardsToMatch];
+}
+
 - (void)initializeNewGame {
     self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
                                                   usingDeck:[[SUPlayingDeck alloc] init]];
+    self.game.numberOfCardsToMatch = [self selectedNumberOfCardsToMatch];
+}
+
+- (NSUInteger)selectedNumberOfCardsToMatch {
+    switch (self.gameSelectionControl.selectedSegmentIndex) {
+        case TwoCardGame:
+            return 2;
+        case ThreeCardGame:
+            return 3;
+        default:
+            return 2;
+    }
 }
 
 - (void)updateUI {
