@@ -19,6 +19,8 @@
 		AF6EB2E716B26BA5007C5F76 /* SUPlayingDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */; };
 		AF6EB2E916B27548007C5F76 /* SUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF47416B2551200C0AC8B /* SUViewController.m */; };
 		AF6EB2EA16B27556007C5F76 /* SUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEBF46516B2551200C0AC8B /* SUAppDelegate.m */; };
+		AF93CB8C16BB8D43006411D7 /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF93CB8B16BB8D43006411D7 /* cardBack.jpg */; };
+		AF93CB8D16BB8D43006411D7 /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF93CB8B16BB8D43006411D7 /* cardBack.jpg */; };
 		AFBAFED416B25C2E008F3D30 /* SUCardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */; };
 		AFEBF45616B2551200C0AC8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45516B2551200C0AC8B /* UIKit.framework */; };
 		AFEBF45816B2551200C0AC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45716B2551200C0AC8B /* Foundation.framework */; };
@@ -64,6 +66,7 @@
 		AF6EB2E116B26535007C5F76 /* SUPlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingCard.m; path = models/SUPlayingCard.m; sourceTree = "<group>"; };
 		AF6EB2E416B26BA5007C5F76 /* SUPlayingDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SUPlayingDeck.h; path = models/SUPlayingDeck.h; sourceTree = "<group>"; };
 		AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingDeck.m; path = models/SUPlayingDeck.m; sourceTree = "<group>"; };
+		AF93CB8B16BB8D43006411D7 /* cardBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardBack.jpg; sourceTree = "<group>"; };
 		AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUCardSpec.m; path = models/SUCardSpec.m; sourceTree = "<group>"; };
 		AFEBF45116B2551200C0AC8B /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBF45516B2551200C0AC8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -186,6 +189,7 @@
 		AFEBF45C16B2551200C0AC8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF93CB8B16BB8D43006411D7 /* cardBack.jpg */,
 				AFEBF45D16B2551200C0AC8B /* Matchismo-Info.plist */,
 				AFEBF45E16B2551200C0AC8B /* InfoPlist.strings */,
 				AFEBF46116B2551200C0AC8B /* main.m */,
@@ -313,6 +317,7 @@
 				AFEBF46C16B2551200C0AC8B /* Default-568h@2x.png in Resources */,
 				AFEBF46F16B2551200C0AC8B /* MainStoryboard_iPhone.storyboard in Resources */,
 				AFEBF47216B2551200C0AC8B /* MainStoryboard_iPad.storyboard in Resources */,
+				AF93CB8C16BB8D43006411D7 /* cardBack.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 			files = (
 				AFEBF48716B2551200C0AC8B /* InfoPlist.strings in Resources */,
 				AFEBF49916B2567800C0AC8B /* MainStoryboard_iPhone.storyboard in Resources */,
+				AF93CB8D16BB8D43006411D7 /* cardBack.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

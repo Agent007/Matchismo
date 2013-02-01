@@ -87,6 +87,14 @@ enum CardGame {
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
+        
+        if (!cardButton.selected) {
+            cardButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4);
+            [cardButton setImage:[UIImage imageNamed:@"cardBack.jpg"]
+                        forState:UIControlStateNormal];
+        } else {
+            [cardButton setImage:nil forState:UIControlStateNormal];
+        }
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
 }
