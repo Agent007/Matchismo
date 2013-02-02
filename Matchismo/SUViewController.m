@@ -124,14 +124,10 @@ enum CardGame {
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable ? 0.3 : 1.0;
         
-        // show or hide card button 'face-down' image
-        if (!cardButton.selected) {
-            cardButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4);
-            [cardButton setImage:[UIImage imageNamed:@"cardBack.jpg"]
-                        forState:UIControlStateNormal];
-        } else {
-            [cardButton setImage:nil forState:UIControlStateNormal];
-        }
+        // show or hide card button 'face-down' image (a.k.a. card back image)
+        cardButton.imageEdgeInsets = UIEdgeInsetsMake(4, 4, 4, 4);
+        UIImage *cardImage = (cardButton.selected) ? nil : [UIImage imageNamed:@"cardBack.jpg"];
+        [cardButton setImage:cardImage forState:UIControlStateNormal];
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
 }
