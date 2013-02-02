@@ -20,7 +20,7 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
 
 - (NSMutableArray *)cards {
     if (!_cards) {
-        _cards = [NSMutableArray array];
+        _cards = NSMutableArray.array;
     }
     return _cards;
 }
