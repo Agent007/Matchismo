@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Flips: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dut-1d-BGt">
-                                <rect key="frame" x="34" y="419" width="122" height="21"/>
+                                <rect key="frame" x="20" y="419" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -199,7 +199,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8mD-7L-4QE">
-                                <rect key="frame" x="164" y="419" width="122" height="21"/>
+                                <rect key="frame" x="178" y="419" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -294,6 +294,13 @@
                                     <action selector="selectGame:" destination="2" eventType="valueChanged" id="cRi-zG-FOc"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="apB-TS-APP">
+                                <rect key="frame" x="101" y="419" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="traverseHistory:" destination="2" eventType="valueChanged" id="k8O-Q2-sbc"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -301,6 +308,7 @@
                     <connections>
                         <outlet property="flipsLabel" destination="Dut-1d-BGt" id="J1y-5S-ZtD"/>
                         <outlet property="gameSelectionControl" destination="XYR-TP-BRG" id="pQ0-8X-E4d"/>
+                        <outlet property="historySlider" destination="apB-TS-APP" id="fgR-my-vgn"/>
                         <outlet property="lastFlipResultLabel" destination="0SQ-Ac-CwA" id="iQR-A6-bce"/>
                         <outlet property="scoreLabel" destination="8mD-7L-4QE" id="cBw-lG-23y"/>
                         <outletCollection property="cardButtons" destination="csM-xd-D0d" id="bNG-3Y-eoS"/>
@@ -331,8 +339,10 @@
             <relationships>
                 <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
                 <relationship kind="action" name="selectGame:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="traverseHistory:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="gameSelectionControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="historySlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="lastFlipResultLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>

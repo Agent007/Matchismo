@@ -83,4 +83,14 @@ static const NSInteger MATCH_BONUS = 4, MISMATCH_PENALTY = 2, FLIP_COST = 1;
     }
 }
 
+// could also store flip history array here
+- (void)clearHistory {
+    self.score = 0;
+    self.lastFlipResultDescription = nil;
+    for (SUCard *card in self.cards) {
+        card.isFaceUp = NO;
+        card.isUnplayable = NO;
+    }
+}
+
 @end

@@ -16,6 +16,8 @@ enum CardGame {
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastFlipResultLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *gameSelectionControl;
+@property (strong, nonatomic) NSMutableArray *history;
+@property (weak, nonatomic) IBOutlet UISlider *historySlider;
 
 @end
 
@@ -42,18 +44,37 @@ enum CardGame {
     return _game;
 }
 
+- (NSMutableArray *)history {
+    if (!_history) {
+        _history = NSMutableArray.array;
+    }
+    return _history;
+}
+
 #pragma mark - actions
 
-- (IBAction)flipCard:(UIButton *)sender {
-    self.gameSelectionControl.enabled = NO;
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
+- (void)flipCardWithoutAddingToHistory:(NSUInteger)cardButtonIndex {
+    [self.game flipCardAtIndex:cardButtonIndex];
     self.flipsCount++;
-    [self updateUI];
+}
+
+- (IBAction)flipCard:(UIButton *)sender {
+    self.gameSelectionControl.enabled = NO; // disable game selector when starting
+    self.historySlider.enabled = YES; // re-enable in case flip happens after sliding through game history
+    self.historySlider.value = 1.0; // jump to the 'present' on each new flip
+    self.lastFlipResultLabel.alpha = 1.0; // re-enable label
+    
+    NSUInteger cardButtonIndex = [self.cardButtons indexOfObject:sender];
+    [self.history addObject:[NSNumber numberWithInteger:cardButtonIndex]];
+    [self resetAndReplayHistoryUpToButExcludingIndex:self.history.count];
 }
 
 - (IBAction)restartGame {
     self.gameSelectionControl.enabled = YES;
+    self.historySlider.value = 0.0;
+    self.historySlider.enabled = NO;
     self.flipsCount = 0;
+    [self.history removeAllObjects];
     self.game = nil;
     [self updateUI];
 }
@@ -62,10 +83,23 @@ enum CardGame {
     self.game.numberOfCardsToMatch = [self selectedNumberOfCardsToMatch];
 }
 
-- (void)initializeNewGame {
-    self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
-                                                  usingDeck:[[SUPlayingDeck alloc] init]];
-    self.game.numberOfCardsToMatch = [self selectedNumberOfCardsToMatch];
+- (void)resetAndReplayHistoryUpToButExcludingIndex:(NSUInteger)index {
+    self.flipsCount = 0;
+    [self.game clearHistory];
+    for (NSUInteger i = 0; i < index; i++) {
+        NSNumber *cardIndexNumber = self.history[i];
+        [self flipCardWithoutAddingToHistory:cardIndexNumber.integerValue];
+    }
+    [self updateUI];
+}
+
+- (IBAction)traverseHistory:(UISlider *)sender {
+    self.lastFlipResultLabel.alpha = 0.5; // indicate that this is a past result
+    
+    NSUInteger currentIndex = llroundf(sender.value * self.history.count);
+    
+    // reset and then replay history up to current slider point
+    [self resetAndReplayHistoryUpToButExcludingIndex:currentIndex];
 }
 
 - (NSUInteger)selectedNumberOfCardsToMatch {

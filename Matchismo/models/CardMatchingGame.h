@@ -13,4 +13,11 @@
 
 - (SUCard *)cardAtIndex:(NSUInteger)index;
 
+/**
+ *
+ * Reset score, last flip description & card states, but re-use card deck.
+ *
+ */
+- (void)clearHistory;
+
 @end
