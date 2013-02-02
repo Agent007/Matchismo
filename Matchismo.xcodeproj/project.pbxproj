@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6726697DE3FF4AE6B20C5834 /* libPods-MatchismoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */; };
+		AF20C7F216BD9E3900A545F5 /* SUViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AF20C7F116BD9E3900A545F5 /* SUViewControllerSpec.m */; };
 		AF323A9E16BB716C00D47C88 /* SUPlayingCardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AF323A9D16BB716C00D47C88 /* SUPlayingCardSpec.m */; };
 		AF3DF9FF16B8CB2600291CC4 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */; };
 		AF3DFA0016B8CB2600291CC4 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		7D3879AC867D4E69A2C382E0 /* libPods-MatchismoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatchismoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF69E5CCEDF428D8489FA83 /* Pods-MatchismoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatchismoTests.xcconfig"; path = "Pods/Pods-MatchismoTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		AF20C7F116BD9E3900A545F5 /* SUViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUViewControllerSpec.m; path = controllers/SUViewControllerSpec.m; sourceTree = "<group>"; };
 		AF323A9D16BB716C00D47C88 /* SUPlayingCardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingCardSpec.m; path = models/SUPlayingCardSpec.m; sourceTree = "<group>"; };
 		AF3DF9FD16B8CB2600291CC4 /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardMatchingGame.h; path = models/CardMatchingGame.h; sourceTree = "<group>"; };
 		AF3DF9FE16B8CB2600291CC4 /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardMatchingGame.m; path = models/CardMatchingGame.m; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF20C7F016BD9E1B00A545F5 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF20C7F116BD9E3900A545F5 /* SUViewControllerSpec.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
 		AF6EB2E816B27270007C5F76 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		AFEBF48216B2551200C0AC8B /* MatchismoTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF20C7F016BD9E1B00A545F5 /* controllers */,
 				AF8382AE16B25A51008FE279 /* models */,
 				AFEBF48816B2551200C0AC8B /* MatchismoTests.h */,
 				AFEBF48916B2551200C0AC8B /* MatchismoTests.m */,
@@ -393,6 +404,7 @@
 				AF6EB2EA16B27556007C5F76 /* SUAppDelegate.m in Sources */,
 				AF3DFA0016B8CB2600291CC4 /* CardMatchingGame.m in Sources */,
 				AF323A9E16BB716C00D47C88 /* SUPlayingCardSpec.m in Sources */,
+				AF20C7F216BD9E3900A545F5 /* SUViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
