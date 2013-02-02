@@ -35,7 +35,9 @@ enum CardGame {
 
 - (CardMatchingGame *)game {
     if (!_game) {
-        [self initializeNewGame];
+        _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
+                                                  usingDeck:[[SUPlayingDeck alloc] init]];
+        _game.numberOfCardsToMatch = [self selectedNumberOfCardsToMatch];
     }
     return _game;
 }
@@ -52,7 +54,7 @@ enum CardGame {
 - (IBAction)restartGame {
     self.gameSelectionControl.enabled = YES;
     self.flipsCount = 0;
-    [self initializeNewGame];
+    self.game = nil;
     [self updateUI];
 }
 
