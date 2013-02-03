@@ -94,9 +94,10 @@ enum CardGame {
 }
 
 - (IBAction)traverseHistory:(UISlider *)sender {
-    self.lastFlipResultLabel.alpha = 0.5; // indicate that this is a past result
-    
     NSUInteger currentIndex = llroundf(sender.value * self.history.count);
+    
+    // indicate that this is a past result unless the slider is at the most recent flip
+    self.lastFlipResultLabel.alpha = (currentIndex < self.history.count) ? 0.5 : 1.0;
     
     // reset and then replay history up to current slider point
     [self resetAndReplayHistoryUpToButExcludingIndex:currentIndex];
