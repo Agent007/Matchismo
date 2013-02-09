@@ -23,6 +23,8 @@
 		AF93CB8C16BB8D43006411D7 /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF93CB8B16BB8D43006411D7 /* cardBack.jpg */; };
 		AF93CB8D16BB8D43006411D7 /* cardBack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF93CB8B16BB8D43006411D7 /* cardBack.jpg */; };
 		AFBAFED416B25C2E008F3D30 /* SUCardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */; };
+		AFD7B20016C5C5B500D38C07 /* SetCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD7B1FF16C5C5B500D38C07 /* SetCardGameViewController.m */; };
+		AFD7B20116C5C5B500D38C07 /* SetCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD7B1FF16C5C5B500D38C07 /* SetCardGameViewController.m */; };
 		AFEBF45616B2551200C0AC8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45516B2551200C0AC8B /* UIKit.framework */; };
 		AFEBF45816B2551200C0AC8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45716B2551200C0AC8B /* Foundation.framework */; };
 		AFEBF45A16B2551200C0AC8B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEBF45916B2551200C0AC8B /* CoreGraphics.framework */; };
@@ -70,6 +72,8 @@
 		AF6EB2E516B26BA5007C5F76 /* SUPlayingDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUPlayingDeck.m; path = models/SUPlayingDeck.m; sourceTree = "<group>"; };
 		AF93CB8B16BB8D43006411D7 /* cardBack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardBack.jpg; sourceTree = "<group>"; };
 		AFBAFED316B25C2E008F3D30 /* SUCardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SUCardSpec.m; path = models/SUCardSpec.m; sourceTree = "<group>"; };
+		AFD7B1FE16C5C5B500D38C07 /* SetCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardGameViewController.h; sourceTree = "<group>"; };
+		AFD7B1FF16C5C5B500D38C07 /* SetCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardGameViewController.m; sourceTree = "<group>"; };
 		AFEBF45116B2551200C0AC8B /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBF45516B2551200C0AC8B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFEBF45716B2551200C0AC8B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -136,6 +140,8 @@
 			children = (
 				AFEBF47316B2551200C0AC8B /* SUViewController.h */,
 				AFEBF47416B2551200C0AC8B /* SUViewController.m */,
+				AFD7B1FE16C5C5B500D38C07 /* SetCardGameViewController.h */,
+				AFD7B1FF16C5C5B500D38C07 /* SetCardGameViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 				AF6EB2E216B26535007C5F76 /* SUPlayingCard.m in Sources */,
 				AF6EB2E616B26BA5007C5F76 /* SUPlayingDeck.m in Sources */,
 				AF3DF9FF16B8CB2600291CC4 /* CardMatchingGame.m in Sources */,
+				AFD7B20016C5C5B500D38C07 /* SetCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +412,7 @@
 				AF3DFA0016B8CB2600291CC4 /* CardMatchingGame.m in Sources */,
 				AF323A9E16BB716C00D47C88 /* SUPlayingCardSpec.m in Sources */,
 				AF20C7F216BD9E3900A545F5 /* SUViewControllerSpec.m in Sources */,
+				AFD7B20116C5C5B500D38C07 /* SetCardGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
